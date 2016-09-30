@@ -21,11 +21,11 @@
         正常終了した場合は 0 を、それ以外の場合は 1 を返します。
     
     .EXAMPLE
-        C:\Temp にインストールメディアの NanoServer フォルダーをコピーした場合
-        PS C:\> .\Modify-NanoServerImageGenerator.ps1 -Path C:\Temp\NanoServer\NanoServerImageGenerator
+        .\Modify-NanoServerImageGenerator.ps1 -Path C:\Temp\NanoServer\NanoServerImageGenerator
+        C:\Temp にインストールメディアの NanoServer フォルダーをコピーした場合、NanoServer フォルダー内の NanoServerImageGenerator フォルダーを指定してください。
     
     .NOTES
-        This script is only for Windows Server 2016 RTM (10.0.14393)
+        This script is only for Windows Server 2016 RTM (10.0.14393).
         This script is tested with Windows Server 2016 Evaluation 10.0.14393.0 JA-JP only.
         Use this at your own risk!
 #>
