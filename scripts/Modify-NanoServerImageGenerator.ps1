@@ -53,26 +53,24 @@ $line2508 = @'
 ## Check target
 if(!(Test-Path $target)) {
     Write-Output "モジュールが存在しません。"
-    Write-Verbose ("Path: {0}" -f $Path)
-    Write-Verbose ("Target: {0}" -f $target)
+    Write-Verbose -Message ("Path: {0}" -f $Path)
+    Write-Verbose -Message ("Target: {0}" -f $target)
     exit 1
 }
 
 $h = Get-FileHash -Algorithm SHA256 $target
 if($hash -ine $h.Hash) {
     Write-Output "モジュールがオリジナルの状態ではありません。"
-    Write-Verbose "モジュールのハッシュ値が想定と異なります。"
-    Write-Verbose ("Expected Hash (SHA256): {0}" -f $hash)
-    Write-Verbose ("Actual Hash (SHA256): {0}" -f $h.Hash)
+    Write-Verbose -Message "モジュールのハッシュ値が想定と異なります。"
+    Write-Verbose -Message ("Expected Hash (SHA256): {0}" -f $hash)
+    Write-Verbose -Message ("Actual Hash (SHA256): {0}" -f $h.Hash)
     exit 1
 }
 
 ## Copy & Modify
 Copy-Item -Path $target -Destination ($target + ".original") -Force
 $c = Get-Content -Path $target -Encoding UTF8
-Write-Debug $c[2508]
 $c[2508] = $line2508
-Write-Debug $c[2508]
 Set-Content -Path $target -Value $c -Encoding UTF8
 
 Write-Output "FailoverClusters モジュールを修正しました。"
