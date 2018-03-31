@@ -1,4 +1,6 @@
-﻿#Requires -Version 4
+﻿# このスクリプトには管理者権限は必要ありません。
+
+#Requires -Version 4
 $ErrorActionPreference = "Stop"
 
 $installsource = "https://richhewlett.blob.core.windows.net/blogdownloads/SyntaxHighlight_WordPressCom_OLWPlugIn_V2.0.0.zip"
