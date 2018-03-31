@@ -1,4 +1,25 @@
-﻿Param(
+﻿#Requires -Version 3
+#Requires -RunAsAdministrator
+
+<#
+    .SYNOPSIS
+        WMI 経由でレジストリーの値を取得します。WMI のリモートアクセスが可能な環境であれば、その他のリモートアクセスが許可されていなくても使用できます。
+    
+    .DESCRIPTION
+    
+    .PARAMETER Path
+    
+    .INPUTS
+    
+    .OUTPUTS
+    
+    .EXAMPLE
+    
+    .NOTES
+
+#>
+
+Param(
     [parameter(Mandatory=$true)]
     [string[]]$ComputerName
 )
