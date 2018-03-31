@@ -6,6 +6,8 @@
         Windows Server 2016 RTM の NanoServerImageGenerator を修正し、インターフェース名が ASCII 以外の場合にもアドレスを設定できるようにします。
     
     .DESCRIPTION
+        このスクリプトは Windows Server 2016 RTM 専用です。Windows Server 1709 では Nano Server は Container Image としてのみサポートされます。
+        
         Windows Server 2016 RTM の NanoServerImageGenerator は、インターフェース名が ASCII 文字列以外で表現されることを想定していません。そのため、デフォルトインターフェース名が ASCII 外の環境、例えば "イーサネット" となっている日本語環境では、IP アドレスを正しく設定できません。
 
         このスクリプトは、NanoServerImageGenerator モジュールを修正し、インターフェース名が ASCII 以外の環境においても、New-NanoServerImage で指定した IP アドレスが正しく設定されるよう、モジュールを修正します。
