@@ -1,6 +1,27 @@
-﻿# このスクリプトには管理者権限は必要ありません。
+﻿#Requires -Version 4
 
-#Requires -Version 4
+<#
+    .SYNOPSIS
+        Open Live Writer の Syntax Highlight Plugin をインストールします。
+    
+    .DESCRIPTION
+        Open Live Writer の Syntax Highlight Plugin をインストールします。
+        Open Live Writer は事前にインストールしておく必要があります。
+
+        このスクリプトの実行には、管理者権限は必要ありません。
+    
+    .PARAMETER Path
+    
+    .INPUTS
+    
+    .OUTPUTS
+    
+    .EXAMPLE
+    
+    .NOTES
+
+#>
+
 $ErrorActionPreference = "Stop"
 
 $installsource = "https://richhewlett.blob.core.windows.net/blogdownloads/SyntaxHighlight_WordPressCom_OLWPlugIn_V2.0.0.zip"
