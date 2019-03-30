@@ -7,7 +7,8 @@
     
     .DESCRIPTION
     
-    .PARAMETER Path
+    .PARAMETER ComputerName
+        接続先のコンピューター名を指定します。
     
     .INPUTS
     
